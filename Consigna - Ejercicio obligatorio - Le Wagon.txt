@@ -1,0 +1,36 @@
+OBJETIVO:
+    Vamos a crear una aplicación “Supermercado en consola” en la cual:
+     Un usuario va a ver una lista de productos ( cada producto va a tener un precio )
+     El usuario va a poder guardar en un carrito todos los productos que desee
+     Cuando el usuario no quiera agregar mas productos vamos a mostrarle todos los productos que agrego a su carrito y el precio total
+PASOS A SEGUIR:
+*TENER EN CUENTA: El desafío se puede resolver de muchas maneras y esta quizás no sea la mejor, peeero si puede ser la forma mas “sencilla” de hacerlo*
+Primero que nada vamos a hacer el pseudocodigo ( escribir con nuestras palabras que pasos vamos a seguir )
+Darle la bienvenida al usuario a la aplicación “Supermercado en consola”
+#CREAR CATALOGO DE PRODUCTOS
+	Crear un catalogo de productos (mínimo 3), cada producto va a tener un precio (variable? array? o hash?)
+#CREAR CARRITO
+( esto podemos resolverlo de muchas formas, acá dejo 2 consejos, en base a lo que decidan puede cambiar mucho el código. Yo en este caso voy      a optar por la mas fácil que es la opción 1 (con esta opción vamos a lograr que la aplicación funcione pero no seria la mejor forma de todas) )
+	
+       OPCION 1:
+		Creo un contenedor vacío (carrito_nombres) para guardar el nombre de los productos que el usuario quiera llevar ( variable?, array? o hash? )
+		Creo un contenedor vacío (carrito_precios) para guardar el precio de los productos que el usuario quiera llevar	 ( variable?, array? o hash? )
+	OPCION 2:
+		Creo un contenedor que va a guardar el nombre y el precio del producto que el usuario quiera llevar  ( variable?, array? o hash? )
+#INTERACCION CON EL USUARIO
+	 Creo una variable: mas_productos = “” ( esta variable va a definir nuestro bucle ) 	
+	 Creo un bucle con el  cual va a interactuar  el usuario hasta que la variable “mas_productos” sea == ‘no’ ”
+		Muestro la lista de productos ( idealmente producto y precio)
+		Le pregunto al usuario que producto quiere agregar a su carrito
+		Guardo la respuesta del usuario ( gets.chomp? )
+		Ya tengo el nombre del producto !! Lo puedo guardar en mi contenedor carrito_nombres !! ( << ? )
+		Con el nombre del producto puedo acceder a su precio !! Guardo el precio en mi contenedor carrito_precios ( <<? )
+		Le pregunto al usuario si quiere agregar otro productos ( si / no )
+		Guardo la respuesta del usuario en mi variable mas_productos ( Si la respuesta es “no” salgo del bucle, si la respuesta es si, el   bucle sigue agregando productos)
+#MOSTRAR CARRITO
+	Cuando el usuario salga del bucle voy a tener que mostrarle la lista producto que llevo s y el total de su carrito, para esto voy a necesitar:
+	Mostrar TODOS los nombres de los productos que se guardaron  en el  contenedor ( como recorro “carrito_nombres” ? )
+	
+	Una vez que mostré los nombres de los productos me toca sumar todos los precios que tengo guardados en “carrito_precios”, para esto:
+		Recorro “carrito_precios” y sumo en cada “vuelta” el valor a mi acumulador “total” o puedo utilizar un metodo de ruby    “magico” que nos va a sumar todos los precios
+	
